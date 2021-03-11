@@ -161,7 +161,7 @@ class Dog
   
   def self.find_by_id(id)
     sql = <<-SQL
-      SELECT * FROM dogs WHERE ID = ?
+      SELECT * FROM dogs WHERE id = ?
     SQL
     
     DB[:conn].execute(sql).map do |row|
@@ -169,7 +169,6 @@ class Dog
     end.first
   end 
   
- 
 end
 
 
