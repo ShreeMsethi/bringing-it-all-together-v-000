@@ -166,7 +166,8 @@ class Dog
     
     DB[:conn].execute(sql).map |row|
       self.create_new_from_db(row)
-    end  
+    end.first
+    
   end 
 end
 
