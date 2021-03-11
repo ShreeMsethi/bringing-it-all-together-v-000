@@ -114,6 +114,14 @@ class Dog
     @id = id
   end 
   
+  def self.create_table
+    sql = <<-SQL
+      CREATE TABLE IF NOT EXISTS (id INTEGER PRIMARY INTEGER, name TEXT, breed TEXT)
+    SQL
+    
+    DB[:conn].execute(sql)
+  end  
+  
 end
 
 
